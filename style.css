@@ -1,9 +1,11 @@
+@font-face{font-family:'Rubik';src:url(fonts/Rubik.woff2) format('woff2');font-weight:300 900;font-display:swap}
+@font-face{font-family:'Snell Roundhand';src:url(fonts/SnellRoundhand-Bold.woff2) format('woff2');font-weight:400;font-display:swap}
 :root{--bg:#BED1D4;--ink:#000;--white:#fff;--wip:#8a8f90}
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{height:100%}
 body{background:var(--bg);color:var(--ink);font-family:'Rubik',sans-serif;font-weight:400}
 a{color:inherit;text-decoration:none}
-.script{font-family:'Pinyon Script','Snell Roundhand',cursive;font-weight:400;text-transform:none}
+.script{font-family:'Snell Roundhand',cursive;font-weight:400;text-transform:none}
 
 /* HOME */
 .home{min-height:100vh;display:grid;grid-template-rows:1fr auto;padding:0 4.5vw 5vh}
@@ -12,7 +14,7 @@ a{color:inherit;text-decoration:none}
 .menu{display:flex;flex-direction:column;gap:2.4vw;list-style:none}
 .menu a{display:block;font-size:clamp(18px,2.7vw,36px);font-weight:500;text-transform:uppercase;line-height:1.1;white-space:nowrap}
 .menu a.wip{color:var(--wip);pointer-events:auto;cursor:default}
-.menu a:hover,.menu a:focus-visible{font-family:'Pinyon Script','Snell Roundhand',cursive;font-weight:400;text-transform:none;font-size:clamp(24px,3.6vw,48px);outline:none}
+.menu a:hover,.menu a:focus-visible{font-family:'Snell Roundhand',cursive;font-weight:400;text-transform:none;font-size:clamp(24px,3.6vw,48px);outline:none}
 .tagline{text-align:center;font-size:clamp(14px,1.7vw,22px);font-weight:500;min-height:1.6em}
 .tagline.script{font-size:clamp(18px,2.2vw,30px)}
 
