@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Air Music</title><meta name="description" content="we want air, we need music">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Rubik:wght@400;500&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css"></head>
+<body><main class="home">
+<section class="hero">
+<img class="logo" src="img/logo.png" alt="Air Music">
+<ul class="menu">
+<li><a href="cafe-chantant.html" data-tag="racconti, copertine e storie di musica">Cafe Chantant</a></li>
+<li><a href="inspira-espira.html" data-tag="respiro di libertà musicale" data-script>Inspira—Espira</a></li>
+<li><a class="wip" aria-disabled="true" data-tag="work in progress — presto online">Shops (W.I.P.)</a></li>
+<li><a class="wip" aria-disabled="true" data-tag="work in progress — presto online">Eventi (W.I.P.)</a></li>
+</ul></section>
+<p class="tagline" id="tag">we want air, we need music</p>
+</main>
+<script>
+const tag=document.getElementById('tag'),def=tag.textContent;
+document.querySelectorAll('.menu a').forEach(a=>{
+ const on=()=>{tag.textContent=a.dataset.tag;tag.classList.add('script')};
+ const off=()=>{tag.textContent=def;tag.classList.remove('script')};
+ a.addEventListener('mouseenter',on);a.addEventListener('focus',on);
+ a.addEventListener('mouseleave',off);a.addEventListener('blur',off);
+});
+</script></body></html>
