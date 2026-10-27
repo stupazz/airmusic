@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Manifesto — Air Music</title>
+<link rel="stylesheet" href="style.css"></head>
+<body class="manifesto-page"><main class="manifesto">
+<img src="img/manifesto.jpg" alt="Manifesto Air Music">
+<a class="back" href="index.html">← Home</a>
+<button class="snd" id="snd" type="button" aria-pressed="false">Sound on</button>
+<audio id="aud" src="audio/manifesto.mp3" loop preload="none"></audio>
+</main>
+<script>
+const a=document.getElementById('aud'),b=document.getElementById('snd');
+b.addEventListener('click',()=>{
+ if(a.paused){a.play().then(()=>{b.textContent='Sound off';b.setAttribute('aria-pressed','true')}).catch(()=>{})}
+ else{a.pause();b.textContent='Sound on';b.setAttribute('aria-pressed','false')}
+});
+</script></body></html>
